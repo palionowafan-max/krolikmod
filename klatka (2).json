@@ -1,0 +1,183 @@
+{
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "particle": "minecraft:block/iron_bars",
+    "bars": "minecraft:block/iron_bars",
+    "floor": "minecraft:block/oak_planks",
+    "bowl": "minecraft:block/white_concrete",
+    "water": "minecraft:block/light_blue_concrete",
+    "food": "minecraft:block/hay_block_top"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        1,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#floor"
+        },
+        "south": {
+          "texture": "#floor"
+        },
+        "east": {
+          "texture": "#floor"
+        },
+        "west": {
+          "texture": "#floor"
+        },
+        "up": {
+          "texture": "#floor"
+        },
+        "down": {
+          "texture": "#floor"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#bars",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "#bars",
+          "cullface": "south"
+        },
+        "east": {
+          "texture": "#bars",
+          "cullface": "east"
+        },
+        "west": {
+          "texture": "#bars",
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#bars",
+          "cullface": "up"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        0.01
+      ],
+      "to": [
+        16,
+        16,
+        15.99
+      ],
+      "faces": {
+        "north": {
+          "texture": "#bars"
+        },
+        "south": {
+          "texture": "#bars"
+        }
+      }
+    },
+    {
+      "from": [
+        0.01,
+        0,
+        0
+      ],
+      "to": [
+        15.99,
+        16,
+        16
+      ],
+      "faces": {
+        "east": {
+          "texture": "#bars"
+        },
+        "west": {
+          "texture": "#bars"
+        }
+      }
+    },
+    {
+      "from": [
+        11,
+        1,
+        1
+      ],
+      "to": [
+        15,
+        3,
+        5
+      ],
+      "faces": {
+        "north": {
+          "texture": "#bowl"
+        },
+        "south": {
+          "texture": "#bowl"
+        },
+        "east": {
+          "texture": "#bowl"
+        },
+        "west": {
+          "texture": "#bowl"
+        },
+        "down": {
+          "texture": "#bowl"
+        },
+        "up": {
+          "texture": "#water"
+        }
+      }
+    },
+    {
+      "from": [
+        1,
+        1,
+        11
+      ],
+      "to": [
+        5,
+        3,
+        15
+      ],
+      "faces": {
+        "north": {
+          "texture": "#food"
+        },
+        "south": {
+          "texture": "#food"
+        },
+        "east": {
+          "texture": "#food"
+        },
+        "west": {
+          "texture": "#food"
+        },
+        "up": {
+          "texture": "#food"
+        },
+        "down": {
+          "texture": "#food"
+        }
+      }
+    }
+  ]
+}

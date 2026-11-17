@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="krolikmod"
+version="1.0.0"
+displayName="Królik Mod"
+authors="Ziomsigiemka_1"
+description='''Królik-pupil, tablet ze sklepem i dostawą oraz masa rzeczy dla królika!'''
+
+[[dependencies.krolikmod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.krolikmod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"

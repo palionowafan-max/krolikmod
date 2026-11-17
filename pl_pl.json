@@ -1,0 +1,23 @@
+{
+  "item.krolikmod.tablet": "Tablet",
+  "item.krolikmod.krolik": "Królik (w pudełku)",
+  "block.krolikmod.klatka": "Klatka dla królika",
+  "block.krolikmod.drewno": "Drewno do gryzienia",
+  "item.krolikmod.przysmak": "Przysmak dla królika",
+  "item.krolikmod.pilka": "Piłka dla królika",
+  "item.krolikmod.okulary": "Okulary do wody",
+  "item.krolikmod.buty": "Buty dla królika",
+  "item.krolikmod.sterownik": "Sterownik",
+  "item.krolikmod.ochrona": "Ochrona",
+  "item.krolikmod.dzwiekoinator": "Dźwiękoinator",
+  "item.krolikmod.deskorolka": "Deskorolka",
+  "item.krolikmod.tunel": "Tunel",
+  "block.krolikmod.tunel_blok": "Tunel",
+  "block.krolikmod.paczka": "Paczka",
+  "item.krolikmod.zly_zapach": "Zły zapach",
+  "item.krolikmod.milosnik": "Miłośnik",
+  "item.krolikmod.mikstura": "Mikstura pełnego HP",
+  "entity.krolikmod.krolik": "Królik",
+  "entity.krolikmod.pilka": "Piłka",
+  "entity.krolikmod.deskorolka": "Deskorolka"
+}

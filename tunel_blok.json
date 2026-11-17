@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "krolikmod:block/tunel"
+    },
+    "axis=x": {
+      "model": "krolikmod:block/tunel",
+      "y": 90
+    }
+  }
+}
