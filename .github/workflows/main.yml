@@ -9,7 +9,13 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - run: chmod +x gradlew && ./gradlew build --no-daemon
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.8"
+      - name: Pokaz pliki
+        run: ls -R | grep -v "^$" | head -80
+      - name: Buduj
+        run: gradle build --no-daemon
       - uses: actions/upload-artifact@v4
         with:
           name: krolikmod-jar
