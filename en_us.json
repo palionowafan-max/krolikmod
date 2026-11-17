@@ -1,6 +1,6 @@
 {
   "item.krolikmod.tablet": "Tablet",
-  "item.krolikmod.krolik": "Królik (w pudełku)",
+  "item.krolikmod.krolik": "Gucio (w pudełku)",
   "block.krolikmod.klatka": "Klatka dla królika",
   "block.krolikmod.drewno": "Drewno do gryzienia",
   "item.krolikmod.przysmak": "Przysmak dla królika",
@@ -17,7 +17,7 @@
   "item.krolikmod.zly_zapach": "Zły zapach",
   "item.krolikmod.milosnik": "Miłośnik",
   "item.krolikmod.mikstura": "Mikstura pełnego HP",
-  "entity.krolikmod.krolik": "Królik",
+  "entity.krolikmod.krolik": "Gucio",
   "entity.krolikmod.pilka": "Piłka",
   "entity.krolikmod.deskorolka": "Deskorolka"
 }

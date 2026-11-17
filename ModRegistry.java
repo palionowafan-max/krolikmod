@@ -33,7 +33,7 @@ public class ModRegistry {
 
     // ===== BYTY =====
     public static final RegistryObject<EntityType<PetRabbit>> PET_RABBIT = ENTITIES.register("krolik",
-            () -> EntityType.Builder.<PetRabbit>of(PetRabbit::new, MobCategory.CREATURE).sized(0.4F, 0.5F).clientTrackingRange(10).build("krolik"));
+            () -> EntityType.Builder.<PetRabbit>of(PetRabbit::new, MobCategory.CREATURE).sized(0.6F, 0.8F).clientTrackingRange(10).build("krolik"));
     public static final RegistryObject<EntityType<Pilka>> PILKA_ENTITY = ENTITIES.register("pilka",
             () -> EntityType.Builder.<Pilka>of(Pilka::new, MobCategory.MISC).sized(0.45F, 0.45F).clientTrackingRange(10).updateInterval(1).build("pilka"));
     public static final RegistryObject<EntityType<Deskorolka>> DESKOROLKA_ENTITY = ENTITIES.register("deskorolka",

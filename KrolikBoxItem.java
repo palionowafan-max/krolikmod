@@ -13,10 +13,9 @@ import pl.ziomsigiemka.krolik.entity.PetRabbit;
 
 /** Królik w pudełku - PPM na ziemię i masz swojego królika. */
 public class KrolikBoxItem extends OpisItem {
-    private static final String[] IMIONA = {"Puszek", "Kicek", "Uszatek", "Śnieżek", "Marchewa", "Bambi", "Kłapouch", "Fafik", "Skoczek", "Ciastek"};
 
     public KrolikBoxItem(Properties props) {
-        super(props, "PPM na ziemię = wypuść swojego królika!\nKrólik będzie twój i będzie za tobą chodził.");
+        super(props, "PPM na ziemię = wypuść Gucia!\nGucio będzie twój i będzie za tobą chodził.");
     }
 
     @Override
@@ -30,7 +29,7 @@ public class KrolikBoxItem extends OpisItem {
         if (r == null) return InteractionResult.FAIL;
         r.moveTo(pos.getX() + 0.5D, pos.getY(), pos.getZ() + 0.5D, ctx.getRotation() + 180.0F, 0.0F);
         r.finalizeSpawn(sl, sl.getCurrentDifficultyAt(pos), MobSpawnType.SPAWN_EGG, null, null);
-        r.setCustomName(Component.literal(IMIONA[sl.random.nextInt(IMIONA.length)]));
+        r.setCustomName(Component.literal("Gucio"));
         if (player != null) {
             r.setOwnerId(player.getUUID());
             player.displayClientMessage(Component.literal("§aOto twój królik " + r.getName().getString() + "!"), true);

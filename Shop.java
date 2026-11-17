@@ -22,27 +22,28 @@ import java.util.function.Supplier;
 /** Sklep w tablecie + dostawa paczką. Ceny są w szmaragdach (w trybie kreatywnym za darmo). */
 public class Shop {
 
-    public record Entry(String name, Supplier<? extends Item> item, int count, int price, String desc) {}
+    /** category: 1 = Dom, 2 = Zabawki, 3 = Ubranka, 4 = Gadżety */
+    public record Entry(String name, Supplier<? extends Item> item, int count, int price, String desc, int category) {}
 
     private static List<Entry> entries;
 
     public static List<Entry> entries() {
         if (entries == null) {
             entries = List.of(
-                    new Entry("Królik", ModRegistry.KROLIK, 1, 5, "Twój własny królik! PPM na ziemię, żeby go wypuścić."),
-                    new Entry("Klatka", ModRegistry.KLATKA_ITEM, 1, 3, "Z poidełkiem i jedzeniem. Królik sam do niej chodzi."),
-                    new Entry("Drewno do gryzienia", ModRegistry.DREWNO_ITEM, 1, 1, "Królik gryzie 5 sekund, potem 10 minut przerwy."),
-                    new Entry("Przysmak", ModRegistry.PRZYSMAK, 4, 1, "Trzymasz w ręce - królik przybiega."),
-                    new Entry("Piłka", ModRegistry.PILKA, 1, 2, "Królik będzie ją odbijał."),
-                    new Entry("Okulary do wody", ModRegistry.OKULARY, 1, 3, "Królik nie topi się i pływa na górze."),
-                    new Entry("Buty", ModRegistry.BUTY, 1, 3, "Powolne opadanie, zero obrażeń od upadku."),
-                    new Entry("Sterownik", ModRegistry.STEROWNIK, 1, 8, "Wchodzisz w ciało królika i nim sterujesz!"),
-                    new Entry("Ochrona", ModRegistry.OCHRONA, 1, 6, "Przeciwnicy obok królika są ogłuszeni i tracą życie."),
-                    new Entry("Dźwiękoinator", ModRegistry.DZWIEKOINATOR, 1, 2, "Królik gada na czacie."),
-                    new Entry("Deskorolka", ModRegistry.DESKOROLKA, 1, 4, "Królik na niej jeździ i jest szybszy."),
-                    new Entry("Tunel", ModRegistry.TUNEL, 1, 3, "Szklany tunel od bloku do bloku - kanał dla królika."),
-                    new Entry("Zły zapach", ModRegistry.ZLY_ZAPACH, 3, 2, "Uderz kogoś - królik go gryzie!"),
-                    new Entry("Miłośnik", ModRegistry.MILOSNIK, 1, 10, "Komendy: /obrot /skok /idz /gryzon /miksturowiec")
+                    new Entry("Gucio", ModRegistry.KROLIK, 1, 5, "Twój własny królik Gucio! PPM pudełkiem na ziemię, żeby go wypuścić.", 1),
+                    new Entry("Klatka", ModRegistry.KLATKA_ITEM, 1, 3, "Z poidełkiem i jedzeniem. Królik sam do niej chodzi.", 1),
+                    new Entry("Drewno do gryzienia", ModRegistry.DREWNO_ITEM, 1, 1, "Królik gryzie 5 sekund, potem 10 minut przerwy.", 1),
+                    new Entry("Przysmak", ModRegistry.PRZYSMAK, 4, 1, "Trzymasz w ręce - królik przybiega.", 2),
+                    new Entry("Piłka", ModRegistry.PILKA, 1, 2, "Królik będzie ją odbijał.", 2),
+                    new Entry("Okulary do wody", ModRegistry.OKULARY, 1, 3, "Królik nie topi się i pływa na górze.", 3),
+                    new Entry("Buty", ModRegistry.BUTY, 1, 3, "Powolne opadanie, zero obrażeń od upadku.", 3),
+                    new Entry("Sterownik", ModRegistry.STEROWNIK, 1, 8, "Wchodzisz w ciało królika i nim sterujesz!", 4),
+                    new Entry("Ochrona", ModRegistry.OCHRONA, 1, 6, "Przeciwnicy obok królika są ogłuszeni i tracą życie.", 3),
+                    new Entry("Dźwiękoinator", ModRegistry.DZWIEKOINATOR, 1, 2, "Królik gada na czacie.", 4),
+                    new Entry("Deskorolka", ModRegistry.DESKOROLKA, 1, 4, "Królik na niej jeździ i jest szybszy.", 2),
+                    new Entry("Tunel", ModRegistry.TUNEL, 1, 3, "Szklany tunel od bloku do bloku - kanał dla królika.", 1),
+                    new Entry("Zły zapach", ModRegistry.ZLY_ZAPACH, 3, 2, "Uderz kogoś - królik go gryzie!", 4),
+                    new Entry("Miłośnik", ModRegistry.MILOSNIK, 1, 10, "Komendy: /obrot /skok /idz /gryzon /miksturowiec", 4)
             );
         }
         return entries;
