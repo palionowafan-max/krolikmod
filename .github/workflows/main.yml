@@ -12,8 +12,36 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: "8.8"
-      - name: Pokaz pliki
-        run: ls -R | grep -v "^$" | head -80
+      - name: Uloz pliki w folderach
+        run: |
+          R=src/main/resources
+          A=$R/assets/krolikmod
+          mkdir -p $A/blockstates $A/lang $A/models/block $A/models/item $A/textures/item $A/textures/block $R/data/krolikmod/loot_tables/blocks $R/META-INF
+          for f in *.java; do
+            pkg=$(grep -m1 '^package ' "$f" | sed 's/package \(.*\);.*/\1/' | tr -d '\r')
+            d=src/main/java/$(echo "$pkg" | tr . /)
+            mkdir -p "$d"
+            mv "$f" "$d/"
+          done
+          for f in *.png; do
+            case "$f" in
+              paczka_*) mv "$f" $A/textures/block/ ;;
+              *) mv "$f" $A/textures/item/ ;;
+            esac
+          done
+          mv en_us.json pl_pl.json $A/lang/
+          mv mods.toml $R/META-INF/
+          mv pack.mcmeta $R/
+          rm -f devcontainer.json
+          for f in *.json; do
+            base=$(echo "$f" | sed 's/ ([0-9]*)//')
+            if grep -q '"variants"' "$f"; then dest=$A/blockstates
+            elif grep -q '"pools"' "$f"; then dest=$R/data/krolikmod/loot_tables/blocks
+            elif grep -q '"elements"' "$f"; then dest=$A/models/block
+            else dest=$A/models/item; fi
+            mv "$f" "$dest/$base"
+          done
+          find src -type f | sort
       - name: Buduj
         run: gradle build --no-daemon
       - uses: actions/upload-artifact@v4
